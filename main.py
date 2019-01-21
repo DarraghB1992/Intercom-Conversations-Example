@@ -32,7 +32,9 @@ def get_conversations():
         total_pages = conversation_json['pages']['total_pages']
         next_page_url = conversation_json['pages']['next']
 
-        # Do things with the conversation json
+        # If you would like to gather the full conversation data you'll need to store the
+        # conversation id and make a request to the get a single conversation endpoint
+        # https://developers.intercom.com/intercom-api-reference/reference#get-a-single-conversation
 
         if r.status_code != 200:
             raise Exception('Api response: {}'.format(r.status_code))
